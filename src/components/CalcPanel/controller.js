@@ -23,7 +23,8 @@ await getAllItems().then(d => setBanks(d));
     setLoan(0);
     setPayment(0);
     setBank({});
-    setError([]);
+      setError([]);
+      setRes();
 
   }
 
