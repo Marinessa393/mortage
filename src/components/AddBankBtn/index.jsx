@@ -8,7 +8,7 @@ const AddBankBtn = ({openModal, initData}) => {
   return (
     <Tooltip title="Add bank" placement="left-start">
     <button type="button" className="addBtn" onClick={() => openModal(initData)}>
-      <Add/>
+      <span>Add bank </span><Add/>
       </button>
       </Tooltip>
   )
