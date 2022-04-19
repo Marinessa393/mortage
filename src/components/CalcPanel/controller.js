@@ -23,8 +23,17 @@ await getAllItems().then(d => setBanks(d));
     setLoan(0);
     setPayment(0);
     setBank({});
+    setError([]);
+
   }
 
+  const handleSetLoan = (e) => {
+    setLoan(+e.target.value);
+  }
+
+  const handleSetpayment = (e) => {
+    setPayment(+e.target.value);
+  }
   
   const calc = () => {
     setError([]);
@@ -53,6 +62,9 @@ await getAllItems().then(d => setBanks(d));
     return Math.round(num * 100) / 100;
   }
 
+  const formatLoan = String(loan).replace(/^0+/, "");
+  const formatPayment = String(payment).replace(/^0+/, "");
+
   const enable = loan !== 0 && payment !== 0 && bank;
 
 
@@ -61,10 +73,10 @@ await getAllItems().then(d => setBanks(d));
     <>
       <CalcPanel
         banks={banks}
-        loan={loan}
-        setLoan={setLoan}
-        payment={payment}
-        setPayment={setPayment}
+        loan={formatLoan}
+        setLoan={handleSetLoan}
+        payment={formatPayment}
+        setPayment={handleSetpayment}
         calc={calc}
         formatResult={formatResult}
         enable={enable}

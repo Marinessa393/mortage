@@ -18,6 +18,9 @@ const CalcPanel = (props) => {
     setBank
   } = props;
 
+  
+
+
   return (
     <>
     <Paper sx={{padding: ' 32px 15px'}}>
@@ -29,7 +32,7 @@ const CalcPanel = (props) => {
               value={loan}
               type="number"
               variant="outlined"
-              onChange={e => setLoan(+e.target.value)}
+              onChange={setLoan}
               color="warning"
               fullWidth
               error={loan < 1}
@@ -43,10 +46,10 @@ const CalcPanel = (props) => {
               value={payment}
               type="number"
               variant="outlined"
-              onChange={e => setPayment(+e.target.value)}
+              onChange={setPayment}
               color="warning"
               fullWidth
-              error={payment < 1}
+              error={payment < 1 && payment < loan}
               helperText={'Value can\'t be 0 '}
               inputProps={{min: '1'}}/>
         </Grid>
