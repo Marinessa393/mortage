@@ -51,10 +51,11 @@ await getAllItems().then(d => setBanks(d));
       setError(arr);
       return;
     } else {
-      const step1 = (loan - payment) * (+bank.rate / 12);
-      const step2 = Math.pow((1 + bank.rate / 12), +bank.term);
-      const step3 = step2 - 1;
-      const step4 = step1 * step2 / step3;
+      const rate = Number(bank?.rate) / 12 / 100;
+      const step1 = Math.pow((rate + 1), Number(bank?.term));
+      const step2 = step1 - 1;
+      const step3 = rate * step1 / step2;
+      const step4 = (loan - payment) * step3;
       setRes(formatResult(step4));
     }
   }

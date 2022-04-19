@@ -84,8 +84,8 @@ const CalcPanel = (props) => {
         {error.map(e => <Typography color="error" variant="h6">{e}</Typography>)}
         </Paper>}
       {res && res > 0 && <Paper sx={{ marginTop: '20px', padding: '15px 10px' }}>
-        <Typography variant="h6" component="p">Your monthly payment is {formatResult(res / bank?.term)}</Typography>
-        <Typography variant="h6" component="p" color="success">Total payment: {res}</Typography>
+        <Typography variant="h6" component="p">Your monthly payment is {res}</Typography>
+        <Typography variant="h6" component="p" color="success">Total payment: {formatResult(res * bank?.term)}</Typography>
       </Paper>}
     </>
   )
