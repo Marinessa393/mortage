@@ -1,0 +1,41 @@
+.App {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 40px;
+  text-align: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.7)
+  );
+  min-height: calc(100vh - 72px);
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 72px);
+  padding: 15px;
+}
+
+.title {
+  color: #fff;
+  margin: 0 auto;
+  padding: 40px 0 60px;
+}
+
+body.light {
+  .App {
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    );
+  }
+
+  .title {
+    color: #212121;
+  }
+}

@@ -1,0 +1,26 @@
+.currency_title {
+  color: #fff;
+}
+
+body.light .currency_title {
+  color: #212121;
+}
+
+.currency {
+  font-weight: 700;
+  font-size: 16px;
+  &.buy {
+    color: rgb(24, 122, 24);
+  }
+  &.sale {
+    color: rgb(214, 79, 1);
+  }
+}
+
+.name {
+  color: #fff;
+}
+
+body.light .name {
+  color: #212121;
+}

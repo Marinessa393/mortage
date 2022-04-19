@@ -1,0 +1,26 @@
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  z-index: 12000;
+  .modal {
+    position: relative;
+    width: 350px;
+    height: 50%;
+    padding: 10px 17px;
+    background: #fff;
+    border-radius: 8px;
+  }
+
+  .closeBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+}
